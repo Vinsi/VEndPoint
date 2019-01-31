@@ -8,8 +8,8 @@
 
 import Foundation
 import Alamofire
-extension EndPointTypeAdapter : URLRequestConvertible{
-func asURLRequest() throws -> URLRequest {
+extension EndPointTypeAdapter : URLRequestConvertible {
+    public func asURLRequest() throws -> URLRequest {
     return  try self.toURLRequest()!
 }
 }

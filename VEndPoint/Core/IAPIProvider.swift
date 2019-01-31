@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol IAPIProvider {
+public protocol IAPIProvider {
     associatedtype Router  : IAPIRouter
    
     

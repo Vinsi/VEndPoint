@@ -12,12 +12,12 @@ import Foundation
 
 
 
-class APIProvider<E:IAPIRouter>:IAPIProvider {
+public class APIProvider<E:IAPIRouter>:IAPIProvider {
 
-    typealias Router = E
+    public typealias Router = E
     
-    var environment: IEnvironment
-    var decoder: IDecoderEngine?
+    public var environment: IEnvironment
+    public var decoder: IDecoderEngine?
     
     init(environment :IEnvironment,
          httpEngine  :IHttpNetworkEngine,
@@ -35,7 +35,7 @@ class APIProvider<E:IAPIRouter>:IAPIProvider {
     
     var httpEngine:IHttpNetworkEngine
      @discardableResult
-    func request<R:Codable>(endpoint:  @escaping (_ router:Router.Type)->EndPointType, responseType:R.Type, onComplete:( @escaping (_ status:APIStatus, _ response:R?) -> Void)) -> ICancellable? {
+    public func request<R:Codable>(endpoint:  @escaping (_ router:Router.Type)->EndPointType, responseType:R.Type, onComplete:( @escaping (_ status:APIStatus, _ response:R?) -> Void)) -> ICancellable? {
         
         let adapter = EndPointTypeAdapter(environment: environment, endPoint: endpoint(Router.self))
         

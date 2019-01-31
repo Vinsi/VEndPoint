@@ -11,14 +11,14 @@ import Alamofire
 
  
  
- class  AlamoRequest :ICancellable{
-    func isCancelled() -> Bool {
+ public class  AlamoRequest :ICancellable{
+    public func isCancelled() -> Bool {
         return false
     }
     
     
     var request:DataRequest? = nil
-    func cancel() {
+  public   func cancel() {
         request?.cancel()
         
     }
@@ -35,10 +35,10 @@ import Alamofire
     
  }
 
- class  AlamoFireNetworkEngine:IHttpNetworkEngine {
+ public class  AlamoFireNetworkEngine:IHttpNetworkEngine {
   
    
-    var plugins: [IHttpPlugins]
+    public var plugins: [IHttpPlugins]
     
   
   
@@ -49,7 +49,7 @@ import Alamofire
     
   
   
-    func handle(endPointAdapter : EndPointTypeAdapter ,onComplete:@escaping (_ status:Status,_ responseData:Data? )->Void)->ICancellable? {
+    public func handle(endPointAdapter : EndPointTypeAdapter ,onComplete:@escaping (_ status:Status,_ responseData:Data? )->Void)->ICancellable? {
         
       
         

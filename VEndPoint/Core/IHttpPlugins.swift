@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol IHttpPlugins {
+public protocol IHttpPlugins {
     
     func httpPluginDidStart()
     func httpPluginDidRecieveData(data:Data,recieved:Int ,totalSizeinBytes:Int )

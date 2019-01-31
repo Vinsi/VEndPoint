@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class EndPointTypeAdapter  {
+public class EndPointTypeAdapter  {
     
     private var environment:IEnvironment
     private var endPoint:EndPointType
