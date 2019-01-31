@@ -19,7 +19,7 @@ public class APIProvider<E:IAPIRouter>:IAPIProvider {
     public var environment: IEnvironment
     public var decoder: IDecoderEngine?
     
-    init(environment :IEnvironment,
+    public init(environment :IEnvironment,
          httpEngine  :IHttpNetworkEngine,
             decoder  :IDecoderEngine) {
         

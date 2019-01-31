@@ -43,7 +43,7 @@ import Alamofire
   
   
   
-    init(plugins:[IHttpPlugins] = []) {
+    public init(plugins:[IHttpPlugins] = []) {
         self.plugins = plugins
     }
     
