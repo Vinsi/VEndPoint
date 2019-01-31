@@ -11,7 +11,9 @@ public class JsonDecoderEngine : IDecoderEngine {
     
     
     var decoder: JSONDecoder? = JSONDecoder()
-    
+    public init(){
+        
+    }
     public func decode<T:Codable>(decodeType: T.Type, from: Data) throws -> T? {
         return try decoder?.decode(decodeType, from: from)
     }
